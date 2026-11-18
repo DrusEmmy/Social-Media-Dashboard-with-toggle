@@ -18,6 +18,16 @@
   &__subtitle {
     font-size: rem(14);
     font-weight: 700;
-    color: var(--dark-text-1);
+    color: var(--text-1);
+  }
+
+  & hr {
+    width: 100%;
+    border: rem(0.5) solid var(--text-2);
+
+    // background-color: var(--bg);
+    @include breakpoint(medium) {
+      display: none;
+    }
   }
 }

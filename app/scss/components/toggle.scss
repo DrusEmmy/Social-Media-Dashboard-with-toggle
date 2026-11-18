@@ -2,34 +2,18 @@
 
 .toggle {
   border: none;
-  display: grid;
-  grid-template-columns: 1fr rem(68px) 1fr;
-  gap: rem(4) rem(8);
-  margin: 0;
-
-  label {
-    font-size: rem(14);
-    align-self: center;
-    &[for="dark"] {
-      grid-column: 1 / 2;
-      justify-self: end;
-    }
-    &[for="system"] {
-      grid-column: 1 / 4;
-      grid-row: 2 / 3;
-      justify-self: center;
-      align-self: start;
-    }
-    &[for="light"] {
-      grid-column: 3 / 4;
-    }
+  display: flex;
+  align-items: center;
+  // margin: 0;
+  justify-content: space-between;
+  width: 100%;
+  @include breakpoint(medium) {
+    gap: rem(8);
+    width: fit-content;
   }
 
   &__wrapper {
     height: rem(24);
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-
     position: relative;
   }
 
@@ -64,25 +48,23 @@
 
   &__button {
     position: absolute;
-    top: rem(3);
+    top: calc(100% - 21px);
     left: rem(3);
     height: 100%;
     width: rem(18);
     height: rem(18);
     border-radius: 50%;
-    background-color: var(--dark-bg);
+    background-color: var(--bg);
     transition: all 0.3s ease-in-out;
+  }
+
+  #dark:checked ~ .toggle__button {
+    left: rem(3);
+    right: auto;
   }
 
   #light:checked ~ .toggle__button {
     left: calc(100% - 21px);
-    right: 3px;
-  }
-
-  #system:checked ~ .toggle__button {
-    left: 50%;
-    right: auto;
-    transform: translate(-50%);
-    right: 3px;
+    right: rem(3);
   }
 }

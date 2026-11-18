@@ -5,13 +5,20 @@
   margin: 0 auto rem(46);
   max-width: rem(1110);
 
-  @include breakpoint(large) {
-    padding: 0;
-  }
+  display: grid;
+  gap: rem(24);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(rem(255), 1fr));
+  grid-template-columns: 1fr;
   gap: rem(30);
+
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint(large) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
