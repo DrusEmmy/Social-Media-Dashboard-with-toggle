@@ -1,0 +1,43 @@
+{
+  "name": "social-media-dashboard-with-toggle",
+  "version": "1.0.0",
+  "description": "![Design preview for the Social media dashboard with theme switcher coding challenge](preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:dev": "sass --watch scss:css",
+    "sass:prod": "sass --no-source-map --style=compressed scss:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@babel/core": "^8.1.2",
+    "@babel/preset-env": "^8.0.7",
+    "autoprefixer": "^10.6.2",
+    "browser-sync": "^3.0.4",
+    "cssnano": "^9.9.0",
+    "gulp": "^5.0.1",
+    "gulp-babel": "^8.1.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-terser": "^2.1.0",
+    "postcss": "^8.5.33",
+    "sass": "^1.108.2"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "chokidar": "^5.0.0",
+    "detect-libc": "^2.1.2",
+    "immutable": "^5.2.1",
+    "is-extglob": "^2.1.1",
+    "is-glob": "^4.0.3",
+    "node-addon-api": "^7.1.1",
+    "picomatch": "^4.0.7",
+    "readdirp": "^5.1.1",
+    "source-map-js": "^1.2.2"
+  }
+}
