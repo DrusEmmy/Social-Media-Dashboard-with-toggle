@@ -38,12 +38,13 @@
     top: 0;
     border-radius: rem(12);
     pointer-events: none;
-    background: linear-gradient(
-      225deg,
-      var(--toggle-gradient-end) 0%,
-      var(--toggle-gradient-start) 98.02%
-    );
+    // background: linear-gradient(
+    //   225deg,
+    //   var(--toggle-gradient-end) 0%,
+    //   var(--toggle-gradient-start) 98.02%
+    // );
     pointer-events: none;
+    transition: all 0.3s ease-in-out;
   }
 
   &__button {
@@ -62,9 +63,19 @@
     left: rem(3);
     right: auto;
   }
-
+  #dark:checked ~ .toggle__background {
+    background: linear-gradient(
+      225deg,
+      var(--toggle-gradient-end) 0%,
+      var(--toggle-gradient-start) 98.02%
+    );
+  }
   #light:checked ~ .toggle__button {
     left: calc(100% - 21px);
     right: rem(3);
+  }
+
+  #light:checked ~ .toggle__background {
+    background: var(--text-1);
   }
 }
